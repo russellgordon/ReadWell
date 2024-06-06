@@ -10,18 +10,22 @@ import SwiftUI
 struct ReviewsListView: View {
     
     // MARK: Stored properties
+    
+    // Whether the sheet to add a new review is showing or not
     @State private var addNewReviewSheetIsShowing = false
+    
+    // The list of reviews currently defined in the app
+    // NOTE: We add a few example reviews
+    @State private var reviews = exampleReviews
     
     // MARK: Computed properties
     var body: some View {
         NavigationStack {
             VStack {
                 
-                List {
-                    
-                    Text("Dune")
-                    Text("Outlander")
-                    Text("Pride and Prejudice")
+                List(reviews) { review in
+
+                    Text(review.title)
 
                 }
                 .listStyle(.plain)
