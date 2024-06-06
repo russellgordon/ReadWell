@@ -8,8 +8,34 @@
 import SwiftUI
 
 struct LandingView: View {
+    
+    // MARK: Stored properties
+    
+    
+    // MARK: Computed properties
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        TabView {
+            
+            ReviewsListView()
+            .tabItem {
+                Image(systemName: "books.vertical.fill")
+                Text("Reviews")
+            }
+
+            StatisticsView()
+            .tabItem {
+                Image(systemName: "chart.pie.fill")
+                Text("Statistics")
+            }
+
+            GenresListView()
+            .tabItem {
+                Image(systemName: "theatermasks.fill")
+                Text("Genres")
+            }
+            
+        }
     }
 }
 
