@@ -31,6 +31,11 @@ struct ReviewsListView: View {
                     Text("Pride and Prejudice")
                 }
                 .listStyle(.plain)
+                .background {
+                    Color.readWellBrown
+                        .ignoresSafeArea()
+                }
+                
             }
             .navigationTitle("Reviews")
         }
