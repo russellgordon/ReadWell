@@ -25,7 +25,12 @@ struct ReviewsListView: View {
                 
                 List(reviews) { review in
 
-                    Text(review.title)
+                    NavigationLink {
+                        ReviewDetailView(reviewToShow: review)
+                    } label: {
+                        Text(review.title)
+                    }
+
 
                 }
                 .listStyle(.plain)
