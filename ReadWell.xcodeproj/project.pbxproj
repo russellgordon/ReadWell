@@ -21,6 +21,7 @@
 		8117CB572C125A03001C9C84 /* AddGenresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117CB562C125A03001C9C84 /* AddGenresView.swift */; };
 		8117CB5A2C1266B7001C9C84 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117CB592C1266B7001C9C84 /* Genre.swift */; };
 		8117CB5C2C126B33001C9C84 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117CB5B2C126B33001C9C84 /* Review.swift */; };
+		816F87792C126FA70061C5C2 /* ReviewDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816F87782C126FA70061C5C2 /* ReviewDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8117CB562C125A03001C9C84 /* AddGenresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGenresView.swift; sourceTree = "<group>"; };
 		8117CB592C1266B7001C9C84 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		8117CB5B2C126B33001C9C84 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		816F87782C126FA70061C5C2 /* ReviewDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				811728B32C113F680030B6C8 /* GenresListView.swift */,
 				8117CB542C1245F8001C9C84 /* AddReviewView.swift */,
 				8117CB562C125A03001C9C84 /* AddGenresView.swift */,
+				816F87782C126FA70061C5C2 /* ReviewDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8117CB572C125A03001C9C84 /* AddGenresView.swift in Sources */,
+				816F87792C126FA70061C5C2 /* ReviewDetailView.swift in Sources */,
 				811728AC2C113B700030B6C8 /* LandingView.swift in Sources */,
 				811728B22C113F480030B6C8 /* StatisticsView.swift in Sources */,
 				811728992C1136030030B6C8 /* ReadWellApp.swift in Sources */,
