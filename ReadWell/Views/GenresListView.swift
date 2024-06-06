@@ -25,7 +25,9 @@ struct GenresListView: View {
     // MARK: Computed properties
     var body: some View {
         NavigationStack {
-            List(genres) { genre in
+            List(
+                filter(genres, on: searchText)
+            ) { genre in
                 Text(genre.name)
             }
             .searchable(text: $searchText)
@@ -56,6 +58,31 @@ struct GenresListView: View {
             }
             .navigationTitle("Genres")
         }
+    }
+    
+    // MARK: Functions
+    func filter(_ genres: [Genre], on providedText: String) -> [Genre] {
+        
+        // If the provided text is empty, return the original array
+        if providedText.isEmpty {
+            return genres
+        } else {
+            
+            // Make an empty array of genres
+            var filteredGenres: [Genre] = []
+            
+            // Iterate over existing genres
+            for genre in genres {
+                if genre.name.lowercased().contains(providedText.lowercased()) {
+                    filteredGenres.append(genre)
+                }
+            }
+            
+            // Return the list of genres that contain the provided text
+            return filteredGenres
+            
+        }
+        
     }
 }
 
