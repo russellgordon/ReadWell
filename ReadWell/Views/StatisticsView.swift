@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct StatisticsView: View {
+    // MARK: Stored properties
+    
+    
+    // MARK: Computed properties
     var body: some View {
-        ZStack {
-            Color.purple
-                .ignoresSafeArea()
-            
-            Text("Statistics")
-                .foregroundStyle(Color.white)
+        NavigationStack {
+            VStack {
+                Color.purple
+                    .ignoresSafeArea()
+            }
+            .navigationTitle("Statistics")
         }
     }
 }

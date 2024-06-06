@@ -9,12 +9,12 @@ import SwiftUI
 
 struct GenresListView: View {
     var body: some View {
-        ZStack {
-            Color.green
-                .ignoresSafeArea()
-            
-            Text("Genres")
-                .foregroundStyle(Color.white)
+        NavigationStack {
+            VStack {
+                Color.green
+                    .ignoresSafeArea()
+            }
+            .navigationTitle("Genres")
         }
     }
 }

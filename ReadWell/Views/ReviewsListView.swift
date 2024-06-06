@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct ReviewsListView: View {
+    
+    // MARK: Stored properties
+    
+    
+    // MARK: Computed properties
     var body: some View {
-        ZStack {
-            Color.yellow
-                .ignoresSafeArea()
-            
-            Text("Reviews")
+        NavigationStack {
+            VStack {
+                Color.yellow
+                    .ignoresSafeArea()
+            }
+            .navigationTitle("Reviews")
         }
             
     }
