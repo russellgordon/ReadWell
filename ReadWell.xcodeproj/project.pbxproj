@@ -20,6 +20,7 @@
 		8117CB552C1245F8001C9C84 /* AddReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117CB542C1245F8001C9C84 /* AddReviewView.swift */; };
 		8117CB572C125A03001C9C84 /* AddGenresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117CB562C125A03001C9C84 /* AddGenresView.swift */; };
 		8117CB5A2C1266B7001C9C84 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117CB592C1266B7001C9C84 /* Genre.swift */; };
+		8117CB5C2C126B33001C9C84 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117CB5B2C126B33001C9C84 /* Review.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		8117CB542C1245F8001C9C84 /* AddReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewView.swift; sourceTree = "<group>"; };
 		8117CB562C125A03001C9C84 /* AddGenresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGenresView.swift; sourceTree = "<group>"; };
 		8117CB592C1266B7001C9C84 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		8117CB5B2C126B33001C9C84 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				8117CB592C1266B7001C9C84 /* Genre.swift */,
+				8117CB5B2C126B33001C9C84 /* Review.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				811728992C1136030030B6C8 /* ReadWellApp.swift in Sources */,
 				811728AA2C1137D80030B6C8 /* SplashScreenView.swift in Sources */,
 				8117CB552C1245F8001C9C84 /* AddReviewView.swift in Sources */,
+				8117CB5C2C126B33001C9C84 /* Review.swift in Sources */,
 				811728AE2C113BAD0030B6C8 /* OpeningView.swift in Sources */,
 				811728B42C113F680030B6C8 /* GenresListView.swift in Sources */,
 				811728B02C113F220030B6C8 /* ReviewsListView.swift in Sources */,
