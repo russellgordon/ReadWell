@@ -52,6 +52,7 @@ struct GenresListView: View {
                     isShowing: $addNewGenreSheetIsShowing,
                     existingGenres: $genres
                 )
+                .presentationDetents([.fraction(0.33)])
             }
             .navigationTitle("Genres")
         }
