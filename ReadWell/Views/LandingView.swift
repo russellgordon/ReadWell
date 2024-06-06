@@ -17,34 +17,30 @@ struct LandingView: View {
     var body: some View {
         
         TabView {
-            Group {
-                
-                ReviewsListView()
-                    .tabItem {
-                        Image(systemName: "books.vertical.fill")
-                        Text("Reviews")
-                    }
-                
-                StatisticsView()
-                    .tabItem {
-                        Image(systemName: "chart.pie.fill")
-                        Text("Statistics")
-                    }
-                
-                GenresListView()
-                    .tabItem {
-                        Image(systemName: "theatermasks.fill")
-                        Text("Genres")
-                    }
-            }
-
-
+            ReviewsListView()
+                .tabItem {
+                    Image(systemName: "books.vertical.fill")
+                    Text("Reviews")
+                }
+            
+            StatisticsView()
+                .tabItem {
+                    Image(systemName: "chart.pie.fill")
+                    Text("Statistics")
+                }
+            
+            GenresListView()
+                .tabItem {
+                    Image(systemName: "theatermasks.fill")
+                    Text("Genres")
+                }
+            
         }
         // Ensure tab bar background color is always set
         .introspect(.tabView, on: .iOS(.v17)) { tabView in
             tabView.tabBar.backgroundColor = UIColor(Color.tabBar)
         }
-
+        
     }
 }
 
