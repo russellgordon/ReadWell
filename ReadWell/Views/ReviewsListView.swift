@@ -12,6 +12,8 @@ struct ReviewsListView: View {
     // MARK: Stored properties
     @State private var selectedPresentationType: Int = 1
     
+    @State private var addNewReviewSheetIsShowing = false
+    
     // MARK: Computed properties
     var body: some View {
         NavigationStack {
@@ -55,12 +57,16 @@ struct ReviewsListView: View {
                     
                     Button {
                         // This would show the add review sheet
+                        addNewReviewSheetIsShowing = true
                     } label: {
                         Image(systemName: "plus")
                     }
 
                 }
                 
+            }
+            .sheet(isPresented: $addNewReviewSheetIsShowing) {
+                AddReviewView(isShowing: $addNewReviewSheetIsShowing)
             }
             .navigationTitle("Reviews")
         }
