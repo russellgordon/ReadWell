@@ -35,6 +35,7 @@ struct ReviewsListView: View {
                     Color.readWellBrown
                         .ignoresSafeArea()
                 }
+                .searchable(text: Binding.constant(""))
                 
             }
             .navigationTitle("Reviews")
