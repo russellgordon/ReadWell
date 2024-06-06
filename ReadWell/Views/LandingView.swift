@@ -5,6 +5,7 @@
 //  Created by Russell Gordon on 2024-06-05.
 //
 
+import SwiftUIIntrospect
 import SwiftUI
 
 struct LandingView: View {
@@ -36,6 +37,11 @@ struct LandingView: View {
             }
             
         }
+        // Ensure tab bar background color is always set
+        .introspect(.tabView, on: .iOS(.v17)) { tabView in
+            tabView.tabBar.backgroundColor = UIColor(Color.tabBar)
+        }
+        
     }
 }
 
