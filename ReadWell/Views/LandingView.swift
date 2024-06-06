@@ -30,12 +30,7 @@ struct LandingView: View {
                 Text("Statistics")
             }
 
-            GenresListView()
-            .tabItem {
-                Image(systemName: "theatermasks.fill")
-                Text("Genres")
-            }
-            
+
         }
         // Ensure tab bar background color is always set
         .introspect(.tabView, on: .iOS(.v17)) { tabView in

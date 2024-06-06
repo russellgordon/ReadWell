@@ -20,6 +20,9 @@ struct AddReviewView: View {
     
     // Allow us to dismiss this sheet
     @Binding var isShowing: Bool
+    
+    // The list of reviews (source of truth is on the parent view)
+    @Binding var reviews: [Review]
 
     // MARK: Computed properties
     var body: some View {
@@ -30,10 +33,7 @@ struct AddReviewView: View {
                     
                     TextField("Title", text: $title)
                     TextField("Author", text: $author)
-                    Picker("Genre", selection: $genre) {
-                        Text("Romance").tag("Romance")
-                        Text("Science Fiction").tag("Science Fiction")
-                    }
+                    TextField("Genre", text: $genre)
 
                 }
                 
@@ -67,8 +67,20 @@ struct AddReviewView: View {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
                         // Add the new book review
+                        let newReview = Review(
+                            title: title,
+                            author: author,
+                            genre: genre,
+                            dateStarted: dateStarted,
+                            dateFinished: dateFinished,
+                            starRating: starRating,
+                            review: review
+                        )
+                        reviews.append(newReview)
+                        
                         // ... and dismiss the sheet
                         isShowing = false
+                        
                     } label: {
                         Text("Done")
                     }
@@ -80,5 +92,8 @@ struct AddReviewView: View {
 }
 
 #Preview {
-    AddReviewView(isShowing: Binding.constant(true))
+    AddReviewView(
+        isShowing: Binding.constant(true),
+        reviews: Binding.constant(exampleReviews)
+    )
 }

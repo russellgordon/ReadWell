@@ -13,7 +13,7 @@ struct Review: Identifiable {
     let id = UUID()
     let title: String
     let author: String
-    let genre: Genre
+    let genre: String
     let dateStarted: Date
     let dateFinished: Date
     let starRating: Int
@@ -24,7 +24,7 @@ struct Review: Identifiable {
 let review1 = Review(
     title: "Dune",
     author: "Frank Herbert",
-    genre: Genre(name: "Science Fiction"),
+    genre: "Science Fiction",
     dateStarted: Calendar.current.date(from: DateComponents(year: 2023, month: 1, day: 1)) ?? Date(), // 2023/01/01
     dateFinished: Calendar.current.date(from: DateComponents(year: 2023, month: 1, day: 15)) ?? Date(), // 2023/01/15
     starRating: 5,
@@ -34,7 +34,7 @@ let review1 = Review(
 let review2 = Review(
     title: "Outlander",
     author: "Diana Gabaldon",
-    genre: Genre(name: "Romance"),
+    genre: "Romance",
     dateStarted: Calendar.current.date(from: DateComponents(year: 2023, month: 2, day: 1)) ?? Date(), // 2023/02/01
     dateFinished: Calendar.current.date(from: DateComponents(year: 2023, month: 1, day: 20)) ?? Date(), // 2023/02/20
     starRating: 4,
@@ -44,7 +44,7 @@ let review2 = Review(
 let review3 = Review(
     title: "Pride and Prejudice",
     author: "Jane Austen",
-    genre: Genre(name: "Romance"),
+    genre: "Romance",
     dateStarted: Calendar.current.date(from: DateComponents(year: 2023, month: 3, day: 1)) ?? Date(), // 2023/03/01
     dateFinished: Calendar.current.date(from: DateComponents(year: 2023, month: 3, day: 10)) ?? Date(), // 2023/03/10
     starRating: 5,

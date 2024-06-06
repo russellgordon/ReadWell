@@ -25,7 +25,7 @@ struct ReviewDetailView: View {
                 Group {
                     Text("Genre")
                         .font(.headline)
-                    Text(reviewToShow.genre.name)
+                    Text(reviewToShow.genre)
                 }
                 
                 Group {
