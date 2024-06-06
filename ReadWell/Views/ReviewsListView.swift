@@ -26,9 +26,20 @@ struct ReviewsListView: View {
                 .padding()
                 
                 List {
-                    Text("Dune")
-                    Text("Outlander")
-                    Text("Pride and Prejudice")
+                    
+                    if selectedPresentationType == 1 {
+                        Text("Dune")
+                        Text("Outlander")
+                        Text("Pride and Prejudice")
+                    } else if selectedPresentationType == 2 {
+                        Text("Austen, Jane")
+                        Text("Gabaldon, Diana")
+                        Text("Herbert, Frank")
+                    } else {
+                        Text("Romance")
+                        Text("Science Fiction")
+                    }
+                    
                 }
                 .listStyle(.plain)
                 .background {
