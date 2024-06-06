@@ -48,7 +48,10 @@ struct GenresListView: View {
             }
             .listStyle(.plain)
             .sheet(isPresented: $addNewGenreSheetIsShowing) {
-                AddGenresView(isShowing: $addNewGenreSheetIsShowing)
+                AddGenresView(
+                    isShowing: $addNewGenreSheetIsShowing,
+                    existingGenres: $genres
+                )
             }
             .navigationTitle("Genres")
         }

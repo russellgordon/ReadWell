@@ -10,9 +10,15 @@ import SwiftUI
 struct AddGenresView: View {
     
     // MARK: Stored properties
+    
+    // What new genre is being added
     @State private var newGenre = ""
     
+    // Whether this view is showing in a sheet
     @Binding var isShowing: Bool
+    
+    // The list of genres (provided by parent view)
+    @Binding var existingGenres: [Genre]
     
     // MARK: Computed properties
     var body: some View {
@@ -30,7 +36,8 @@ struct AddGenresView: View {
                         // Hide the sheet
                         isShowing = false
                         
-                        // TODO: Add the genre
+                        // Add the new genre to the list of existing genres
+                        existingGenres.append(Genre(name: newGenre))
                     } label: {
                         Text("Done")
                     }
@@ -41,5 +48,8 @@ struct AddGenresView: View {
 }
 
 #Preview {
-    AddGenresView(isShowing: Binding.constant(true))
+    AddGenresView(
+        isShowing: Binding.constant(true),
+        existingGenres: Binding.constant(exampleGenres)
+    )
 }
