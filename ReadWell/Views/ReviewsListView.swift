@@ -38,6 +38,19 @@ struct ReviewsListView: View {
                 .searchable(text: Binding.constant(""))
                 
             }
+            .toolbar {
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    
+                    Button {
+                        // This would show the add review sheet
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+
+                }
+                
+            }
             .navigationTitle("Reviews")
         }
             
