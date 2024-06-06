@@ -16,7 +16,23 @@
 		811728B02C113F220030B6C8 /* ReviewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811728AF2C113F220030B6C8 /* ReviewsListView.swift */; };
 		811728B22C113F480030B6C8 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811728B12C113F480030B6C8 /* StatisticsView.swift */; };
 		811728B42C113F680030B6C8 /* GenresListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811728B32C113F680030B6C8 /* GenresListView.swift */; };
+		8117CB4C2C114BD2001C9C84 /* SwiftUIIntrospect-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8117CB4B2C114BD2001C9C84 /* SwiftUIIntrospect-Dynamic */; };
+		8117CB4E2C114BD2001C9C84 /* SwiftUIIntrospect-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 8117CB4B2C114BD2001C9C84 /* SwiftUIIntrospect-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8117CB4D2C114BD2001C9C84 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8117CB4E2C114BD2001C9C84 /* SwiftUIIntrospect-Dynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		811728952C1136030030B6C8 /* ReadWell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadWell.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8117CB4C2C114BD2001C9C84 /* SwiftUIIntrospect-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +64,7 @@
 			children = (
 				811728972C1136030030B6C8 /* ReadWell */,
 				811728962C1136030030B6C8 /* Products */,
+				8117CB482C114BD2001C9C84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +108,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		8117CB482C114BD2001C9C84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,12 +125,16 @@
 				811728912C1136030030B6C8 /* Sources */,
 				811728922C1136030030B6C8 /* Frameworks */,
 				811728932C1136030030B6C8 /* Resources */,
+				8117CB4D2C114BD2001C9C84 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ReadWell;
+			packageProductDependencies = (
+				8117CB4B2C114BD2001C9C84 /* SwiftUIIntrospect-Dynamic */,
+			);
 			productName = ReadWell;
 			productReference = 811728952C1136030030B6C8 /* ReadWell.app */;
 			productType = "com.apple.product-type.application";
@@ -134,6 +163,9 @@
 				Base,
 			);
 			mainGroup = 8117288C2C1136030030B6C8;
+			packageReferences = (
+				8117CB412C114A8B001C9C84 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = 811728962C1136030030B6C8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -372,6 +404,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8117CB412C114A8B001C9C84 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8117CB4B2C114BD2001C9C84 /* SwiftUIIntrospect-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8117CB412C114A8B001C9C84 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = "SwiftUIIntrospect-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8117288D2C1136030030B6C8 /* Project object */;
 }
