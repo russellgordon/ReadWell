@@ -70,7 +70,7 @@ struct AddReviewView: View {
                         // ... and dismiss the sheet
                         isShowing = false
                     } label: {
-                        Text("Add")
+                        Text("Done")
                     }
 
                 }

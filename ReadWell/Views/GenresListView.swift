@@ -12,6 +12,8 @@ struct GenresListView: View {
     // MARK: Stored properties
     @State private var searchText = ""
     
+    @State private var addNewGenreSheetIsShowing = false
+    
     // MARK: Computed properties
     var body: some View {
         NavigationStack {
@@ -30,6 +32,7 @@ struct GenresListView: View {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
                         // Show the NewGenreView
+                        addNewGenreSheetIsShowing = true
                     } label: {
                         Image(systemName: "plus")
                     }
@@ -37,6 +40,9 @@ struct GenresListView: View {
                 }
             }
             .listStyle(.plain)
+            .sheet(isPresented: $addNewGenreSheetIsShowing) {
+                AddGenresView(isShowing: $addNewGenreSheetIsShowing)
+            }
             .navigationTitle("Genres")
         }
     }

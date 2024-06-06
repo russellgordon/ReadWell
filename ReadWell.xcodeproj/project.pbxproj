@@ -18,6 +18,7 @@
 		811728B42C113F680030B6C8 /* GenresListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811728B32C113F680030B6C8 /* GenresListView.swift */; };
 		8117CB532C12440A001C9C84 /* SwiftUIIntrospect-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8117CB522C12440A001C9C84 /* SwiftUIIntrospect-Dynamic */; };
 		8117CB552C1245F8001C9C84 /* AddReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117CB542C1245F8001C9C84 /* AddReviewView.swift */; };
+		8117CB572C125A03001C9C84 /* AddGenresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117CB562C125A03001C9C84 /* AddGenresView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		811728B12C113F480030B6C8 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		811728B32C113F680030B6C8 /* GenresListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresListView.swift; sourceTree = "<group>"; };
 		8117CB542C1245F8001C9C84 /* AddReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewView.swift; sourceTree = "<group>"; };
+		8117CB562C125A03001C9C84 /* AddGenresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGenresView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				811728B12C113F480030B6C8 /* StatisticsView.swift */,
 				811728B32C113F680030B6C8 /* GenresListView.swift */,
 				8117CB542C1245F8001C9C84 /* AddReviewView.swift */,
+				8117CB562C125A03001C9C84 /* AddGenresView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8117CB572C125A03001C9C84 /* AddGenresView.swift in Sources */,
 				811728AC2C113B700030B6C8 /* LandingView.swift in Sources */,
 				811728B22C113F480030B6C8 /* StatisticsView.swift in Sources */,
 				811728992C1136030030B6C8 /* ReadWellApp.swift in Sources */,
