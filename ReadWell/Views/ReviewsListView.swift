@@ -46,7 +46,10 @@ struct ReviewsListView: View {
                 
             }
             .sheet(isPresented: $addNewReviewSheetIsShowing) {
-                AddReviewView(isShowing: $addNewReviewSheetIsShowing)
+                AddReviewView(
+                    isShowing: $addNewReviewSheetIsShowing,
+                    reviews: $reviews
+                )
             }
             .navigationTitle("Reviews")
         }

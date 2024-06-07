@@ -20,6 +20,9 @@ struct AddReviewView: View {
     
     // Allow us to dismiss this sheet
     @Binding var isShowing: Bool
+    
+    // Obtain a reference to the source of truth for our book reviews
+    @Binding var reviews: [Review]
 
     // MARK: Computed properties
     var body: some View {
@@ -64,6 +67,17 @@ struct AddReviewView: View {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
                         // Add the new book review
+                        let newReview = Review(
+                            title: title,
+                            author: author,
+                            genre: genre,
+                            dateStarted: dateStarted,
+                            dateFinished: dateFinished,
+                            starRating: starRating,
+                            review: review
+                        )
+                        reviews.append(newReview)
+                        
                         // ... and dismiss the sheet
                         isShowing = false
                     } label: {
@@ -77,5 +91,8 @@ struct AddReviewView: View {
 }
 
 #Preview {
-    AddReviewView(isShowing: Binding.constant(true))
+    AddReviewView(
+        isShowing: Binding.constant(true),
+        reviews: Binding.constant(exampleReviews)
+    )
 }
