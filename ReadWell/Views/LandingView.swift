@@ -29,12 +29,6 @@ struct LandingView: View {
                 Image(systemName: "chart.pie.fill")
                 Text("Statistics")
             }
-
-            GenresListView()
-            .tabItem {
-                Image(systemName: "theatermasks.fill")
-                Text("Genres")
-            }
             
         }
         // Ensure tab bar background color is always set
