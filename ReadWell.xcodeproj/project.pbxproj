@@ -18,6 +18,7 @@
 		8117CB532C12440A001C9C84 /* SwiftUIIntrospect-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8117CB522C12440A001C9C84 /* SwiftUIIntrospect-Dynamic */; };
 		8117CB552C1245F8001C9C84 /* AddReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117CB542C1245F8001C9C84 /* AddReviewView.swift */; };
 		816F87842C128F1D0061C5C2 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816F87832C128F1D0061C5C2 /* Review.swift */; };
+		816F87862C12983D0061C5C2 /* ReviewDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816F87852C12983D0061C5C2 /* ReviewDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		811728B12C113F480030B6C8 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		8117CB542C1245F8001C9C84 /* AddReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewView.swift; sourceTree = "<group>"; };
 		816F87832C128F1D0061C5C2 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		816F87852C12983D0061C5C2 /* ReviewDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				811728AF2C113F220030B6C8 /* ReviewsListView.swift */,
 				811728B12C113F480030B6C8 /* StatisticsView.swift */,
 				8117CB542C1245F8001C9C84 /* AddReviewView.swift */,
+				816F87852C12983D0061C5C2 /* ReviewDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				811728AA2C1137D80030B6C8 /* SplashScreenView.swift in Sources */,
 				8117CB552C1245F8001C9C84 /* AddReviewView.swift in Sources */,
 				811728AE2C113BAD0030B6C8 /* OpeningView.swift in Sources */,
+				816F87862C12983D0061C5C2 /* ReviewDetailView.swift in Sources */,
 				811728B02C113F220030B6C8 /* ReviewsListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

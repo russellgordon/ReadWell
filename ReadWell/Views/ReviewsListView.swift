@@ -25,8 +25,14 @@ struct ReviewsListView: View {
         NavigationStack {
             List(
                 filter(reviews, on: searchText)
-            ) { review in
-                Text(review.title)
+            ) { currentReview in
+                
+                NavigationLink {
+                    ReviewDetailView(reviewToShow: currentReview)
+                } label: {
+                    Text(currentReview.title)
+                }
+                
             }
             .listStyle(.plain)
             .background {
