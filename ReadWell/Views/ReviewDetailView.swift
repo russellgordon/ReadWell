@@ -21,25 +21,42 @@ struct ReviewDetailView: View {
                     .foregroundColor(.secondary)
                 
                 Divider()
-                
-                Group {
-                    Text("Genre")
-                        .font(.headline)
-                    Text(reviewToShow.genre)
+
+                HStack {
+                    
+                    reviewToShow.coverImage
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 200)
+                    
+                    VStack(alignment: .leading) {
+                        Group {
+                            Text("Genre")
+                                .font(.headline)
+                            Text(reviewToShow.genre)
+                                .padding(.bottom, 16)
+                        }
+                        
+                        Group {
+                            Text("Date Started")
+                                .font(.headline)
+                            Text(formatted(reviewToShow.dateStarted))
+                                .padding(.bottom, 16)
+                        }
+                        
+                        Group {
+                            Text("Date Finished")
+                                .font(.headline)
+                            Text(formatted(reviewToShow.dateFinished))
+                                .padding(.bottom, 16)
+                        }
+                        
+                        Spacer()
+                    }
+
+
                 }
-                
-                Group {
-                    Text("Date Started")
-                        .font(.headline)
-                    Text(formatted(reviewToShow.dateStarted))
-                }
-                
-                Group {
-                    Text("Date Finished")
-                        .font(.headline)
-                    Text(formatted(reviewToShow.dateFinished))
-                }
-                
+                                
                 Group {
                     Text("Star Rating")
                         .font(.headline)

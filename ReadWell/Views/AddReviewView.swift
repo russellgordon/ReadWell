@@ -67,8 +67,10 @@ struct AddReviewView: View {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
                         // Add the new book review
+                        // TODO: Add ability to select an image rather than always make the cover image be the image for Dune
                         let newReview = Review(
                             title: title,
+                            coverImage: Image("Dune"),
                             author: author,
                             genre: genre,
                             dateStarted: dateStarted,

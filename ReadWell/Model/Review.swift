@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Review: Identifiable {
     
     // MARK: Stored properties
     let id = UUID()
     let title: String
+    let coverImage: Image
     let author: String
     let genre: String
     let dateStarted: Date
@@ -23,6 +25,7 @@ struct Review: Identifiable {
 
 let review1 = Review(
     title: "Dune",
+    coverImage: Image("Dune"),
     author: "Frank Herbert",
     genre: "Science Fiction",
     dateStarted: Calendar.current.date(from: DateComponents(year: 2023, month: 1, day: 1)) ?? Date(), // 2023/01/01
@@ -33,6 +36,7 @@ let review1 = Review(
 
 let review2 = Review(
     title: "Outlander",
+    coverImage: Image("Outlander"),
     author: "Diana Gabaldon",
     genre: "Romance",
     dateStarted: Calendar.current.date(from: DateComponents(year: 2023, month: 2, day: 1)) ?? Date(), // 2023/02/01
@@ -43,6 +47,7 @@ let review2 = Review(
 
 let review3 = Review(
     title: "Pride and Prejudice",
+    coverImage: Image("PrideAndPrejudice"),
     author: "Jane Austen",
     genre: "Romance",
     dateStarted: Calendar.current.date(from: DateComponents(year: 2023, month: 3, day: 1)) ?? Date(), // 2023/03/01
