@@ -30,10 +30,7 @@ struct AddReviewView: View {
                     
                     TextField("Title", text: $title)
                     TextField("Author", text: $author)
-                    Picker("Genre", selection: $genre) {
-                        Text("Romance").tag("Romance")
-                        Text("Science Fiction").tag("Science Fiction")
-                    }
+                    TextField("Genre", text: $genre)
 
                 }
                 
