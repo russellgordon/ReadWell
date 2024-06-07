@@ -5,6 +5,7 @@
 //  Created by Russell Gordon on 2024-06-06.
 //
 
+import PhotosUI
 import SwiftUI
 
 struct AddReviewView: View {
@@ -23,6 +24,12 @@ struct AddReviewView: View {
     
     // The list of reviews (source of truth is on the parent view)
     @Binding var reviews: [Review]
+    
+    // The selection made in the PhotosPicker
+    @State var selectionResult: PhotosPickerItem?
+
+    // The actual image loaded from the selection that was made
+    @State var newReviewBookCoverImage: BookCoverImage?
 
     // MARK: Computed properties
     var body: some View {
@@ -34,6 +41,28 @@ struct AddReviewView: View {
                     TextField("Title", text: $title)
                     TextField("Author", text: $author)
                     TextField("Genre", text: $genre)
+                    
+                    PhotosPicker(selection: $selectionResult, matching: .images) {
+                        
+                        // Has an image been loaded?
+                        if let newReviewBookCoverImage = newReviewBookCoverImage {
+                            
+                            // Yes, show it
+                            newReviewBookCoverImage.image
+                                .resizable()
+                                .scaledToFit()
+
+                        } else {
+                            
+                            // No, show an icon instead
+                            Image(systemName: "photo.badge.plus")
+                                .symbolRenderingMode(.multicolor)
+                                .font(.system(size: 30))
+                                .foregroundStyle(.tint)
+                            
+                        }
+                    }
+                    .frame(height: 100)
 
                 }
                 
@@ -67,10 +96,9 @@ struct AddReviewView: View {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
                         // Add the new book review
-                        // TODO: Add ability to select an image rather than always make the cover image be the image for Dune
                         let newReview = Review(
                             title: title,
-                            coverImage: Image("Dune"),
+                            coverImage: newReviewBookCoverImage!.image,
                             author: author,
                             genre: genre,
                             dateStarted: dateStarted,
@@ -86,8 +114,33 @@ struct AddReviewView: View {
                     } label: {
                         Text("Done")
                     }
+                    .disabled(newReviewBookCoverImage == nil)
 
                 }
+            }
+            // This block of code is invoked whenever the selection from the picker changes
+            .onChange(of: selectionResult) {
+                // When the selection result is not nil...
+                if let imageSelection = selectionResult {
+                    // ... transfer the data from the selection result into
+                    // an actual instance of TodoItemImage
+                    loadTransferable(from: imageSelection)
+                }
+            }
+        }
+    }
+    
+    // MARK: Functions
+
+    // Transfer the data from the PhotosPicker selection result into the stored property that
+    // will hold the actual image for the new to-do item
+    private func loadTransferable(from imageSelection: PhotosPickerItem) {
+        Task {
+            do {
+                // Attempt to set the stored property that holds the image data
+                newReviewBookCoverImage = try await imageSelection.loadTransferable(type: BookCoverImage.self)
+            } catch {
+                debugPrint(error)
             }
         }
     }
