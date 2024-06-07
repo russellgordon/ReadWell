@@ -17,7 +17,6 @@
 		811728B22C113F480030B6C8 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811728B12C113F480030B6C8 /* StatisticsView.swift */; };
 		8117CB532C12440A001C9C84 /* SwiftUIIntrospect-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8117CB522C12440A001C9C84 /* SwiftUIIntrospect-Dynamic */; };
 		8117CB552C1245F8001C9C84 /* AddReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117CB542C1245F8001C9C84 /* AddReviewView.swift */; };
-		8117CB572C125A03001C9C84 /* AddGenresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8117CB562C125A03001C9C84 /* AddGenresView.swift */; };
 		816F87842C128F1D0061C5C2 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816F87832C128F1D0061C5C2 /* Review.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +31,6 @@
 		811728AF2C113F220030B6C8 /* ReviewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsListView.swift; sourceTree = "<group>"; };
 		811728B12C113F480030B6C8 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		8117CB542C1245F8001C9C84 /* AddReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewView.swift; sourceTree = "<group>"; };
-		8117CB562C125A03001C9C84 /* AddGenresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGenresView.swift; sourceTree = "<group>"; };
 		816F87832C128F1D0061C5C2 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +91,6 @@
 				811728AF2C113F220030B6C8 /* ReviewsListView.swift */,
 				811728B12C113F480030B6C8 /* StatisticsView.swift */,
 				8117CB542C1245F8001C9C84 /* AddReviewView.swift */,
-				8117CB562C125A03001C9C84 /* AddGenresView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,7 +179,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8117CB572C125A03001C9C84 /* AddGenresView.swift in Sources */,
 				811728AC2C113B700030B6C8 /* LandingView.swift in Sources */,
 				816F87842C128F1D0061C5C2 /* Review.swift in Sources */,
 				811728B22C113F480030B6C8 /* StatisticsView.swift in Sources */,
