@@ -25,6 +25,13 @@ struct AddReviewView: View {
     @Binding var reviews: [Review]
 
     // MARK: Computed properties
+    
+    // Returns true when any of the input fields does not have a value
+    var atLeastOneInputFieldIsBlank: Bool {
+        return title.isEmpty || author.isEmpty || genre.isEmpty || review.isEmpty
+    }
+    
+    // Our user interface
     var body: some View {
         NavigationStack {
             Form {
@@ -83,6 +90,7 @@ struct AddReviewView: View {
                     } label: {
                         Text("Done")
                     }
+                    .disabled(atLeastOneInputFieldIsBlank)
 
                 }
             }
