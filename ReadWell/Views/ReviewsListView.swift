@@ -10,15 +10,18 @@ import SwiftUI
 struct ReviewsListView: View {
     
     // MARK: Stored properties
+    
+    // Whether the sheet to add a new review is showing
     @State private var addNewReviewSheetIsShowing = false
+    
+    // Source of truth for our list of book reviews
+    @State private var reviews: [Review] = exampleReviews
     
     // MARK: Computed properties
     var body: some View {
         NavigationStack {
-            List {
-                Text("Dune")
-                Text("Outlander")
-                Text("Pride and Prejudice")
+            List(reviews) { review in
+                Text(review.title)
             }
             .listStyle(.plain)
             .background {
