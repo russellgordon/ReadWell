@@ -11,6 +11,9 @@ import SwiftUI
 struct AddReviewView: View {
     
     // MARK: Stored properties
+    
+    // These properties hold the information provided by a user as they type
+    // information into the view to create a review
     @State private var title: String = ""
     @State private var author: String = ""
     @State private var genre: String = ""
